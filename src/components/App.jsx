@@ -40,14 +40,13 @@ export class App extends Component {
       this.setState({ contacts: parseContacts });
     }
   }
-
+  //Aktualizacja
   componentDidUpdate(_, prevState) {
     if (this.state.contacts !== prevState.contacts) {
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
 
-  
   listFilteredContacts = () => {
     const { contacts, filter } = this.state;
 
